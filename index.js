@@ -34,6 +34,7 @@ const requestLogger = (request, response, next) => {
 app.use(express.json())
 app.use(cors())
 app.use(requestLogger)
+app.use(express.static('build'))
 
 
 app.get('/', (request, response) => {
